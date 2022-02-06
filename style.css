@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+
+    /* Primary */
+    --Soft_blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --blue_main: hsl(217, 54%, 11%);
+    --card_BG: hsl(216, 50%, 16%);
+    --White: hsl(0, 0%, 100%);
+    --blue_line: hsl(215, 32%, 27%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--blue_main);
+}
+
+img[alt*="equilibrium_img"]{
+    width: 270px;
+    border-radius: 1rem;
+    transition: .5s ease-in-out;
+}
+
+img[alt*="icon_img"]{
+    border-radius: 15px;
+}
+
+.card{
+    background-color: var(--card_BG);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 270px;
+    /* height: 455px; */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.main-img{
+    position: relative;
+}
+
+.main-img div{
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 40%);
+    width: 100%;
+    height: calc(100% - 4px);
+    border-radius: 1rem;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.main-img div:hover{
+    opacity: 1;
+}
+
+.main-img div img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+}
+
+h1{
+    font-size: 1.5em;
+    color: var(--White);
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+h1:hover{
+    color: var(--Cyan);
+}
+
+.about_product{
+    margin-bottom: 15px;
+    color: var(--Soft_blue);
+    font-weight: 300;
+    cursor: default;
+}
+
+.price_date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: solid 1px var(--blue_line);
+    color: var(--Soft_blue);
+    cursor: default;
+    font-size: .9em;
+}
+
+.price, .date{
+    display: flex;
+    align-items: center;
+}
+
+.price{
+    font-weight: bold;
+    color: var(--Cyan);
+}
+
+img[alt*="ethereum_img"]{
+    margin-right: 4px;
+}
+
+img[alt*="clock_img"]{
+    margin-right: 2px;
+}
+
+img[alt*="image_of_creator"]{
+    width: 2rem;
+    margin-right: 10px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+.creator{
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: var(--Soft_blue);
+    cursor: default;
+}
+
+.name_of_creator{
+    color: var(--White);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.name_of_creator:hover{
+    color: var(--Cyan);
+}
+
+.attribution {
+    color: var(--Soft_blue);
+    font-size: 11px;
+    text-align: center;
+    cursor: default;
+}
+.attribution a {
+    color: var(--Cyan);
+}
